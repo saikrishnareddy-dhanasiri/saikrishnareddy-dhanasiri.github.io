@@ -10,24 +10,25 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', sans-serif;
-            overflow-x: hidden; /* Prevents horizontal scroll from particles */
+            overflow-x: hidden; 
+            background-color: #1a1a2e; /* Fallback color */
         }
 
         /* 1. Animation Background Setup */
         #particles-js {
-            position: fixed; /* Fixes background so it stays while you scroll */
+            position: fixed; 
             width: 100%;
             height: 100%;
-            background-color: #1a1a2e; /* Dark theme background */
-            z-index: -1; /* Puts animation BEHIND your text */
+            background-color: #1a1a2e; 
+            z-index: -1; 
             top: 0;
             left: 0;
         }
 
-        /* 2. Content Styling (Centering on top of particles) */
+        /* 2. Content Styling */
         .content {
             position: relative;
-            z-index: 1; /* Puts content ON TOP of particles */
+            z-index: 1; 
             color: white;
             text-align: center;
             padding-top: 20vh;
@@ -36,6 +37,7 @@
         }
 
         header h1 { font-size: 3rem; margin-bottom: 10px; }
+        
         .btn {
             display: inline-block;
             background: #00d2ff;
@@ -52,7 +54,6 @@
 </head>
 <body>
 
-    <!-- CONTAINER FOR THE ANIMATION -->
     <div id="particles-js"></div>
 
     <div class="content">
@@ -63,12 +64,14 @@
 
         <section>
             <p>This animation is running live using GitHub Pages!</p>
+            <!-- FIXED LINK BELOW -->
             <a href="https:saikrishnareddy-dhanasiri//github.com" class="btn">View My Repos</a>
         </section>
     </div>
 
-    <!-- 3. ADDING THE ANIMATION LIBRARIES -->
+    <!-- 3. FIXED ANIMATION LIBRARY LINK BELOW -->
     <script src="https://cdn.jsdelivr.net"></script>
+    
     <script>
         /* 4. ANIMATION CONFIGURATION */
         particlesJS("particles-js", {
@@ -84,7 +87,7 @@
             "interactivity": {
                 "detect_on": "canvas",
                 "events": {
-                    "onhover": { "enable": true, "mode": "repulse" }, /* Particles move away from mouse */
+                    "onhover": { "enable": true, "mode": "repulse" }, 
                     "onclick": { "enable": true, "mode": "push" }
                 }
             },
