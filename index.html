@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My Portfolio | Home</title>
+    <style>
+        /* Base styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            overflow-x: hidden; /* Prevents horizontal scroll from particles */
+        }
+
+        /* 1. Animation Background Setup */
+        #particles-js {
+            position: fixed; /* Fixes background so it stays while you scroll */
+            width: 100%;
+            height: 100%;
+            background-color: #1a1a2e; /* Dark theme background */
+            z-index: -1; /* Puts animation BEHIND your text */
+            top: 0;
+            left: 0;
+        }
+
+        /* 2. Content Styling (Centering on top of particles) */
+        .content {
+            position: relative;
+            z-index: 1; /* Puts content ON TOP of particles */
+            color: white;
+            text-align: center;
+            padding-top: 20vh;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header h1 { font-size: 3rem; margin-bottom: 10px; }
+        .btn {
+            display: inline-block;
+            background: #00d2ff;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover { background: #3a7bd5; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <!-- CONTAINER FOR THE ANIMATION -->
+    <div id="particles-js"></div>
+
+    <div class="content">
+        <header>
+            <h1>Welcome to My Portfolio</h1>
+            <p>Interactive Background with Particles.js</p>
+        </header>
+
+        <section>
+            <p>This animation is running live using GitHub Pages!</p>
+            <a href="https:saikrishnareddy-dhanasiri//github.com" class="btn">View My Repos</a>
+        </section>
+    </div>
+
+    <!-- 3. ADDING THE ANIMATION LIBRARIES -->
+    <script src="https://cdn.jsdelivr.net"></script>
+    <script>
+        /* 4. ANIMATION CONFIGURATION */
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5, "random": false },
+                "size": { "value": 3, "random": true },
+                "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
+                "move": { "enable": true, "speed": 4, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "repulse" }, /* Particles move away from mouse */
+                    "onclick": { "enable": true, "mode": "push" }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
